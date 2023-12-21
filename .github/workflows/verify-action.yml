@@ -10,6 +10,6 @@ jobs:
     name: Verify Commit Message
     runs-on: ubuntu-latest
     steps:
-      - uses: namnh240795/verify-commit-action@v1.10
+      - uses: namnh240795/verify-commit-action@v1.11
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
