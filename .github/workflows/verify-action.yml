@@ -3,7 +3,7 @@ name: Verify Commit Message
 on:
   pull_request:
     branches:
-      - production
+      - main
 
 jobs:
   verify-message:
