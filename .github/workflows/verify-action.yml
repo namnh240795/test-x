@@ -1,0 +1,15 @@
+name: Verify Commit Message
+
+on:
+  pull_request:
+    branches:
+      - production
+
+jobs:
+  verify-message:
+    name: Verify Commit Message
+    runs-on: ubuntu-latest
+    steps:
+      - uses: namnh240795/verify-commit-action@v1.7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
