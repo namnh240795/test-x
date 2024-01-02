@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: namnh240795/verify-branch-name-action@v1.1.1
         with:
-          regex: "/^BCM-\\d{4}$/"
+          regex: /^BCM-\d+$/
 
       - uses: namnh240795/verify-commit-action@v1.11
         with:
