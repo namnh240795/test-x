@@ -10,7 +10,7 @@ jobs:
     name: Verify Branch Name and Commit Message
     runs-on: ubuntu-latest
     steps:
-      - uses: namnh240795/verify-branch-name-action@v1.1.2
+      - uses: namnh240795/verify-branch-name-action@v1.1.3
         with:
           regex: /^BCM-\d+$/
 
