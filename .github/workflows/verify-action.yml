@@ -6,19 +6,15 @@ on:
       - main
 
 jobs:
-  verify-branch-name:
-      name: Verify Branch Name
-      runs-on: ubuntu-latest
-      steps:
-        - uses: namnh240795/verify-branch-name-action@v1.0.0
-          with:
-            github-token: ${{ secrets.GITHUB_TOKEN }}
-            regex: production
-
-  verify-message:
-    name: Verify Commit Message
+  linting:
+    name: Verify Branch Name and Commit Message
     runs-on: ubuntu-latest
     steps:
+      - uses: namnh240795/verify-branch-name-action@v1.1.1
+        with:
+          regex: "/^BCM-\\d{4}$/"
+
       - uses: namnh240795/verify-commit-action@v1.11
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+
